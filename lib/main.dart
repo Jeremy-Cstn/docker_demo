@@ -1,3 +1,6 @@
+import 'package:docker_demo/mobile_page.dart';
+import 'package:docker_demo/responsive_layout.dart';
+import 'package:docker_demo/tablet_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -7,16 +10,21 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
- @override
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Responsive Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-  
-        primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: Colors.deepPurpleAccent,
+        colorScheme: ColorScheme.fromSwatch(
+          primarySwatch: Colors.amber,
+        ),
       ),
-      home: ,
+      home: const ResponsiveLayout(
+        mobileBody: MobilePage(),
+        tabletBody: TabletPage(),
+      ),
     );
   }
 }
-
