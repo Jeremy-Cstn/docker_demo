@@ -1,6 +1,7 @@
 import 'package:docker_demo/mobile_page.dart';
 import 'package:docker_demo/responsive_layout.dart';
 import 'package:docker_demo/tablet_page.dart';
+import 'package:docker_demo/constants.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,9 +17,10 @@ class MyApp extends StatelessWidget {
       title: 'Responsive Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        scaffoldBackgroundColor: Colors.deepPurpleAccent,
+        appBarTheme: const AppBarTheme(centerTitle: true),
+        scaffoldBackgroundColor: kTertiaryColor,
         colorScheme: ColorScheme.fromSwatch(
-          primarySwatch: Colors.amber,
+          primarySwatch: kPrimaryColor,
         ),
       ),
       home: const ResponsiveLayout(

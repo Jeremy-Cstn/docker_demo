@@ -1,3 +1,4 @@
+import 'package:docker_demo/constants.dart';
 import 'package:flutter/material.dart';
 
 class HeaderWidget extends StatelessWidget {
@@ -7,21 +8,37 @@ class HeaderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(32.0),
-      padding: const EdgeInsets.all(32.0),
-      height: 140,
-      decoration: BoxDecoration(
-        color: Colors.deepPurple,
-        borderRadius: BorderRadius.circular(20),
-        boxShadow: const [
+      decoration: const BoxDecoration(
+        boxShadow: [
           BoxShadow(
-            blurRadius: 20,
+            blurStyle: BlurStyle.outer,
+            color: kSecondaryColor,
+            blurRadius: kPadding,
           ),
         ],
       ),
-      child: Center(
-        child: FittedBox(
-          child: Text(title),
+      child: Container(
+        margin: const EdgeInsets.all(kPadding),
+        padding: const EdgeInsets.all(kPadding),
+        height: 140,
+        decoration: BoxDecoration(
+          color: kSecondaryColor,
+          borderRadius: BorderRadius.circular(kPadding / 2),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.white.withOpacity(.7),
+              blurRadius: kPadding,
+              spreadRadius: -10,
+            ),
+          ],
+        ),
+        child: Center(
+          child: Text(
+            title,
+            style: kTextStyle,
+            textAlign: TextAlign.center,
+            softWrap: true,
+          ),
         ),
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../constants.dart';
 
 class ContentWidget extends StatelessWidget {
   final String title;
@@ -6,16 +7,20 @@ class ContentWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        margin: const EdgeInsets.all(16),
-        padding: const EdgeInsets.all(16),
-        height: 80,
-        width: 300,
-        color: Colors.deepPurpleAccent,
+    return Card(
+      margin: const EdgeInsets.all(kPadding / 2),
+      color: kSecondaryColor,
+      elevation: 4,
+      shadowColor: Colors.black,
+      child: Container(
+        padding: const EdgeInsets.all(kPadding / 2),
         child: Center(
-          child: FittedBox(
-            child: Text(title),
+          child: Text(
+            title,
+            style: kTextStyleSecondary,
           ),
-        ));
+        ),
+      ),
+    );
   }
 }
