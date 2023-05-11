@@ -12,8 +12,10 @@ const TextStyle kTextStyle = TextStyle(
   fontWeight: FontWeight.bold,
 );
 
-const TextStyle kTextStyleSecondary =
-    TextStyle(fontSize: 22, color: Colors.white, shadows: []);
+const TextStyle kTextStyleSecondary = TextStyle(
+  fontSize: 22,
+  color: Colors.white,
+);
 
 const String kHeadline = "This is my Docker Demonstration!";
 const List<String> kContents = [

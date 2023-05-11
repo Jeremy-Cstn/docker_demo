@@ -20,7 +20,7 @@ class HeaderWidget extends StatelessWidget {
       child: Container(
         margin: const EdgeInsets.all(kPadding),
         padding: const EdgeInsets.all(kPadding),
-        height: 140,
+        constraints: const BoxConstraints(minHeight: 120),
         decoration: BoxDecoration(
           color: kSecondaryColor,
           borderRadius: BorderRadius.circular(kPadding / 2),
